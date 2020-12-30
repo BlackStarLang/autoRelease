@@ -242,7 +242,7 @@ def upload_to_pyger():
     # 为保证 能够找到ipa文件，做一步容错，
     # 如果没有根据路径找到，就遍历文件夹，找到.ipa文件
     if os.path.exists(file_path) == False:
-        ipa_list = os.listdir(os.path)
+        ipa_list = os.listdir(ipa_path)
         for file_name in ipa_list:
             if file_name.find('.ipa') != -1:
                 file_path = '%s/%s' % (ipa_path, file_name)
